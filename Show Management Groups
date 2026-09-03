@@ -1,0 +1,7 @@
+      - name: Verify Login
+        run: |
+          az account show
+
+      - name: Show Management Groups
+        run: |
+          az account management-group list -o table
