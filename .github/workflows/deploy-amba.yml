@@ -22,4 +22,3 @@ jobs:
             --location uksouth \
             --template-file patterns/alz/alzArm.json \
             --parameters @patterns/alz/alzArm.param.json
-``
