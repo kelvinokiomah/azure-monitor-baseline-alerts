@@ -16,9 +16,6 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy AMBA Policies
+      - name: Verify Login
         run: |
-          az deployment sub create \
-            --location uksouth \
-            --template-file patterns/alz/alzArm.json \
-            --parameters @patterns/alz/alzArm.param.json
+          az account show
