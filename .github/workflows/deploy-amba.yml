@@ -23,3 +23,11 @@ jobs:
       - name: Show Management Groups
         run: |
           az account management-group list -o table
+
+      - name: Validate AMBA
+        run: |
+          az deployment mg validate \
+            --management-group-id e81cb2c8-04d7-4cb1-84d3-f8ccf70961f6 \
+            --location uksouth \
+            --template-file patterns/alz/alzArm.json \
+            --parameters @patterns/alz/alzArm.param.json
